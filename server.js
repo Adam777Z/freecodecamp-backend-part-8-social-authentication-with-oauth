@@ -66,9 +66,8 @@ mongo.connect(process.env.DATABASE, { useNewUrlParser: true }, (err, db) => {
       function(accessToken, refreshToken, profile, cb) {
         console.log(profile);
         //Database logic here with callback containing our user object
-        db.db().collection('socialusers').findAndModify(
+        db.db().collection('socialusers').findOneAndUpdate(
           { id: profile.id },
-          {},
           { $setOnInsert: {
             id: profile.id,
             name: profile.displayName || 'John Doe',
@@ -81,7 +80,7 @@ mongo.connect(process.env.DATABASE, { useNewUrlParser: true }, (err, db) => {
           }, $inc: {
             login_count: 1
           }},
-          { upsert: true, new: true }, //Insert object if not found, Return new object after modify
+          { upsert: true, returnOriginal: false }, //Insert object if not found, Return new object after modify
           (err, doc) => {
             return cb(null, doc.value);
           }
