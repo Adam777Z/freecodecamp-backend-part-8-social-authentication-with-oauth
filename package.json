@@ -29,7 +29,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://hyperdev.com/#!/project/welcome-project"
+		"url": "https://github.com/Adam777Z/freecodecamp-backend-part-8-social-authentication-with-oauth.git"
 	},
 	"keywords": [
 		"node",
