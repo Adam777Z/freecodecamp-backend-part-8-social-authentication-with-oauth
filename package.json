@@ -2,11 +2,11 @@
   "//1": "describes your app and its dependencies",
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
-  "name": "FCC-Advanced-Node-and-Express",
   "//author": "http://github.com/JosephLivengood",
-  "author": "Adam",
-  "version": "0.0.1",
+  "name": "fcc-advanced-node-and-express",
   "description": "What am I about?",
+  "version": "1.0.0",
+  "author": "Adam",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -18,9 +18,9 @@
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.14",
     "helmet": "^3.15.0",
-    "pug": "^2.0.3",
-    "express-session": "^1.17.1",
-    "passport": "^0.4.1",
+    "pug": "^3.0.2",
+    "express-session": "^1.17.2",
+    "passport": "^0.5.0",
     "passport-local": "^1.0.0",
     "passport-github": "^1.1.0"
   },
