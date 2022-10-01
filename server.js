@@ -80,7 +80,7 @@ mongo.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology:
           }, $inc: {
             login_count: 1
           }},
-          { upsert: true, returnOriginal: false }, //Insert object if not found, Return new object after modify
+          { upsert: true, returnDocument: 'after' }, // Insert object if not found, Return the updated document
           (err, doc) => {
             return cb(null, doc.value);
           }
