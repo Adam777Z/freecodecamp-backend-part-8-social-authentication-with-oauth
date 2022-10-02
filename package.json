@@ -1,15 +1,14 @@
 {
-  "//1": "describes your app and its dependencies",
+  "//1": "Describes your app and its dependencies",
   "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "//author": "http://github.com/JosephLivengood",
+  "//3": "Updating this file will download and update your packages",
+  "//author": "https://github.com/JosephLivengood",
   "name": "fcc-advanced-node-and-express",
   "description": "What am I about?",
   "version": "1.0.0",
   "author": "Adam",
   "keywords": [
     "node",
-    "hyperdev",
     "express",
     "freecodecamp"
   ],
@@ -35,6 +34,6 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": "16.12.0"
+    "node": ">=16.12.0"
   }
 }

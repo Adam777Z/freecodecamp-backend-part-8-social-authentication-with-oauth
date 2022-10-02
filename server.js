@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'pug');
 
-mongo.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true }, (err, db) => {
+mongo.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true }, (err, db) => {
   if (err) {
     console.log('Database error: ' + err);
   } else {
@@ -35,7 +35,7 @@ mongo.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology:
 
     function ensureAuthenticated(req, res, next) {
       if (req.isAuthenticated()) {
-          return next();
+        return next();
       }
       res.redirect('/');
     };
@@ -48,7 +48,7 @@ mongo.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology:
         db.db().collection('socialusers').findOne(
             {id: id},
             (err, doc) => {
-                done(null, doc);
+              done(null, doc);
             }
         );
     });
@@ -106,13 +106,13 @@ mongo.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology:
 
     app.route('/profile')
       .get(ensureAuthenticated, (req, res) => {
-           res.render(process.cwd() + '/views/pug/profile', {user: req.user});
+        res.render(process.cwd() + '/views/pug/profile', {user: req.user});
       });
 
     app.route('/logout')
       .get((req, res) => {
-          req.logout();
-          res.redirect('/');
+        req.logout();
+        res.redirect('/');
       });
 
     app.use((req, res, next) => {
@@ -121,8 +121,8 @@ mongo.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology:
         .send('Not Found');
     });
 
-    app.listen(process.env.PORT || 3000, () => {
-      console.log("Listening on port " + process.env.PORT);
+    const listener = app.listen(process.env.PORT || 3000, () => {
+      console.log('Listening on port ' + listener.address().port);
     });
   }
 });

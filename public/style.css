@@ -4,7 +4,8 @@
   margin: 10px;
 }
 
-.center {
+.center,
+.text-center {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -13,4 +14,8 @@
 .profile,
 .login {
   margin-top: 100px;
+}
+
+.footer {
+  margin-top: 1rem;
 }
