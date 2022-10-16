@@ -61,7 +61,7 @@ mongo.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology
     passport.use(new GitHubStrategy({
         clientID: process.env.GITHUB_CLIENT_ID,
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
-        callbackURL: 'https://plant-cucumber.glitch.me/auth/github/callback'
+        callbackURL: 'https://adam777z-freecodecamp-backend-part-8-oauth.glitch.me/auth/github/callback'
       },
       function(accessToken, refreshToken, profile, cb) {
         console.log(profile);
