@@ -111,8 +111,10 @@ mongo.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology
 
     app.route('/logout')
       .get((req, res) => {
-        req.logout();
-        res.redirect('/');
+        req.logout((err) => {
+          if (err) { return next(err); }
+          res.redirect('/');
+        });
       });
 
     app.use((req, res, next) => {
