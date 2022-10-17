@@ -1,30 +1,30 @@
 html
-  head
-    title freeCodeCamp - Advanced Node and Express
-    meta(name='description', content='Profile')
-    link#favicon(rel='icon', href='/public/favicon.ico', type='image/x-icon')
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='/public/style.css')
-    //- script(src='/public/client.js')
-  body
-    div.center
-      h1.border.center freeCodeCamp - Advanced Node and Express
-      h2.center Social Login
-      .profile.center
-        img(src=user.photo style='width:150px; border-radius:25%')
-        h3= user.name
-        p #{JSON.stringify(user)}
-        a(href='/logout') Logout
+	head
+		title freeCodeCamp - Advanced Node and Express
+		meta(name='description', content='Profile')
+		link#favicon(rel='icon', href='/public/favicon.ico', type='image/x-icon')
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='stylesheet', href='/public/style.css')
+		//- script(src='/public/client.js')
+	body
+		div.center
+			h1.border.center freeCodeCamp - Advanced Node and Express
+			h2.center Social Login
+			.profile.center
+				img(src=user.photo style='width:150px; border-radius:25%')
+				h3= user.name
+				p #{JSON.stringify(user)}
+				a(href='/logout') Logout
 
-      div.footer.text-center
-        | by
-        |
-        a(href='https://www.freecodecamp.org', target='_blank') freeCodeCamp
-        |  &amp;
-        |
-        a(href='https://www.freecodecamp.org/adam777', target='_blank') Adam
-        |  |
-        |
-        a(href='https://github.com/Adam777Z/freecodecamp-backend-part-8-social-authentication-with-oauth', target='_blank') GitHub
+		div.footer.text-center
+			| by
+			|
+			a(href='https://www.freecodecamp.org', target='_blank') freeCodeCamp
+			|  &amp;
+			|
+			a(href='https://www.freecodecamp.org/adam777', target='_blank') Adam
+			|  |
+			|
+			a(href='https://github.com/Adam777Z/freecodecamp-backend-part-8-social-authentication-with-oauth', target='_blank') GitHub
